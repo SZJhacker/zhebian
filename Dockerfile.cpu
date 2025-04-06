@@ -1,0 +1,15 @@
+# Use official TensorFlow base image (includes Python and pip)
+FROM tensorflow/tensorflow:2.10.1
+
+# Set working directory inside container
+WORKDIR /app
+
+# Copy project files into the container
+COPY . /app
+
+# Install necessary packages
+RUN apt-get update && apt-get install -y \
+    && pip install --no-cache-dir -r requirements.txt
+
+# Set default command (can be overridden)
+CMD ["python", "zhebian.py", "--help"]

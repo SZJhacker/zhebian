@@ -1,0 +1,10 @@
+FROM tensorflow/tensorflow:2.10.1-gpu
+
+WORKDIR /app
+
+COPY . /app
+
+RUN apt-get update && apt-get install -y \
+    && pip install --no-cache-dir -r requirements.txt
+
+CMD ["python", "zhebian.py", "--help"]
