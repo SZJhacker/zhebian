@@ -52,10 +52,9 @@ python zhebian.py \
 ### Prediction
 python predict.py \
   -l Trait_Name \
-  -lm zhebian_model_selector.joblib \
-  -nm zhebian_model_nn.h5 \
-  --input test.csv \
-  --output test_out.csv
+  -m zhebian \
+  -i test.csv \
+  -o test_out.csv
 ```
 
 ### 2.2 Training and Prediction with Docker
@@ -77,10 +76,9 @@ docker run --rm --gpus all -v $(pwd):/app zhebian-gpu \
 docker run --rm -v $(pwd):/app zhebian-cpu \
   python predict.py \
   -l Trait_Name \
-  -lm zhebian_model_selector.joblib \
-  -nm zhebian_model_nn.h5 \
-  --input test.csv \
-  --output test_out.csv
+  -m zhebian \
+  -i test.csv \
+  -o test_out.csv
 ```
 Replace `zhebian-cpu` with `zhebian-gpu` to use GPU support.
 
@@ -94,8 +92,9 @@ Replace `zhebian-cpu` with `zhebian-gpu` to use GPU support.
 | `train.csv`            | Example input data for training. |
 | `test.csv`             | Example input data for prediction. |
 | `test_out.csv`         | Output file with prediction results. |
-| `zhebian_nn.h5`        | Saved trained GRU-Transformer model. |
+| `zhebian_model.h5`        | Saved trained GRU-Transformer model. |
 | `zhebian_selector.joblib` | Saved trained LassoCV feature selector. |
+| `zhebian_scaler.joblib` | Saved trained Scaler model. |
 
 
 
