@@ -1,8 +1,8 @@
-# Zhebian: Attention-based Genomic Prediction Tool
+# ZheBian（赭鞭）: a novel framework integrating sparse selection and attention for crop genome-to-phenotype prediction
 
 ## 🌾 Introduction
 
-**Zhebian** (赭鞭) is a deep learning-based tool for phenotype prediction using genomic data. It leverages GRU (Gated Recurrent Unit) and Transformer attention mechanisms to enhance predictive accuracy. The name "Zhebian" is inspired by Chinese mythology: it refers to a legendary whip said to control the weather and crops—symbolizing this tool’s role in mastering genomic data for crop trait forecasting.
+**Zhebian**  is a novel framework integrating sparse selection and attention for crop genome-to-phenotype prediction. The name is inspired by Shennong (神农), the mythical founder of Chinese agriculture and medicine, who used ‘zhebian’ to **identify the properties of herbs**. We aim to evoke the metaphor of Shennong’s empirical discovery process—now reimagined through modern omics and computational tools to efficiently analyze and predict complex crop traits, unlocking genetic potential and promoting precision agriculture.  It integrates sparse feature selection, sequential modeling, and attention-based fusion.
 
 ---
 ## 📦 1 Installation & Environment Setup
@@ -25,7 +25,7 @@ pip install -r requirements.txt
 
 ### 🐳 Option 2 Docker Build
 
-Zhebian supports deployment via Docker, making it easy to run without manually setting up the environment. Two versions are available: one for **CPU** and one for **GPU** (requires NVIDIA GPU support).
+ZheBian supports deployment via Docker, making it easy to run without manually setting up the environment. Two versions are available: one for **CPU** and one for **GPU** (requires NVIDIA GPU support).
 
 #### Build the CPU Version
 ```bash

@@ -134,8 +134,7 @@ def main():
                       help="Label column name")  
     
     # Optional parameters  
-    # parser.add_argument("-o", "--output_dir", type=str, default=".",  
-    #                   help="Output directory for saving models (default: current directory)")  
+
     parser.add_argument("-o", "--output_model", type=str, default=None,  
                       help="Prefix for output model files (default: input filename without extension)")  
     parser.add_argument("-hd", "--hidden_dim", type=int, default=64,  
